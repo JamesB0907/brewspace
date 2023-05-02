@@ -1,0 +1,67 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "userName": "admin",
+            "email": "admin@brewspace.com"
+        },
+        {
+            "id": 2,
+            "userName": "brewer1",
+            "email": "brewer1@website.com"
+        }
+    ],
+    "recipes": [
+        {
+            "id": 1,
+            "userId": 1,
+            "name": "J's API APA",
+            "style": "American Pale Ale",
+            "malts": "Pale Malt - 8lbs, 8.2oz., Crystal 10 - 11.7 oz.,  Vienna - 11.7 oz. ,Victory - 8.5 oz., Crystal 60 - 5.3 oz. ",
+            "hops": "Magnum - .6 oz, Perle - .5 oz, Fuggle - .5, Fuggle .5 (at 2 minutes)",
+            "yeast": "San Diego Super Yeast by White Labs",
+            "adjuncts": "Gelatin",
+            "recipeGuide": "Single=step mash at 152 degrees Fahrenheit (66.7C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fugglew at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 66 degrees Fahrenheit as possible. Let sit for 5 days then, as an optional step, cold crash and add gelatin before kegging/bottling."
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "name": "Bob's API APA",
+            "style": "American Pale Ale",
+            "malts": "Pale Malt - 9lbs, 10oz, Crystal 10 - 12oz, Vienna - 14oz, Victory - 10.5oz, Crystal 60 - 7oz",
+            "hops": "Magnum - .8 oz, Perle - .6 oz, Fuggle - .6 oz, Fuggle - .6 oz (at 2 minutes)",
+            "yeast": "California Ale Yeast by White Labs",
+            "adjuncts": "Irish Moss",
+            "recipeGuide": "Single-step mash at 153 degrees Fahrenheit (67.2C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fuggle at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 67 degrees Fahrenheit as possible. Let sit for 6 days then, as an optional step, cold crash and add Irish Moss before kegging/bottling."
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "userId": 2,
+            "recipeId": 1,
+            "commentText": "Wow, this one worked out great! Cheers!"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "recipeId": 2,
+            "commentText": "Hey, you copied off my recipe!!"
+        },
+        {
+            "id": 1,
+            "userId": 1,
+            "recipeId": 2,
+            "commentText": "No I didn't!!"
+        }
+    ],
+    "ratings": [
+        {
+            "id": 1,
+            "userId": 2,
+            "recipeId": 1,
+            "isLiked": true 
+        }
+    ]
+}
+
