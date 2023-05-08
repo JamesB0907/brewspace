@@ -1,0 +1,23 @@
+.hotbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    position:fixed 0;
+    border-bottom: solid;
+}
+
+.hotbar__item {
+    flex-basis: 20%;
+    list-style-type: none;
+}
+
+.hotbar__logout {
+    margin-left: auto;
+}
+
+.search__frame {
+    justify-content: center;
+    display: flex;
+    
+}
+

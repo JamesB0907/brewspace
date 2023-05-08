@@ -1,3 +1,24 @@
 .recipeForm {
     flex-direction: column;
 }
+
+.recipe__page {
+    width: 50vw;
+}
+
+.flex__container {
+  display: flex; 
+}
+
+.recipe__form__input {
+    padding-bottom:7px
+}
+
+.recipe__form__ingredients {
+    padding-bottom: 50px;
+}
+
+.recipe__form__guide {
+    padding-bottom: 30px;
+}
+

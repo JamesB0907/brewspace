@@ -3,7 +3,7 @@ import { getRecipes, postRecipe } from "../APIManager"
 import "./Recipe.css"
 
 
-export const RecipeForm = ({ setRecipes }) => {
+export const RecipeEdit = ({ setRecipes }) => {
     const [recipe, update] = useState({
         name: "",
         style: "",
@@ -17,7 +17,7 @@ export const RecipeForm = ({ setRecipes }) => {
     const localBrewspaceUser = localStorage.getItem("brewspace_user")
     const brewspaceUserObject = JSON.parse(localBrewspaceUser)
 
-    const handlePostRecipeClick = (evt) => {
+    const handleSaveEditsClick = (evt) => {
         evt.preventDefault()
 
         const newRecipe = {
@@ -30,22 +30,11 @@ export const RecipeForm = ({ setRecipes }) => {
             adjuncts: recipe.adjuncts,
             recipeGuide: recipe.recipeGuide
         }
-        return postRecipe(newRecipe)
+        return editRecipe(newRecipe)
             .then(getRecipes)
             .then((newData) =>
 
                 setRecipes(newData))
-            .then(() => update({
-                name: "",
-                style: "",
-                malts: "",
-                hops: "",
-                yeast: "",
-                adjuncts: "",
-                recipeGuide: ""
-            }))
-
-
     }
     return (
         <form className="recipeForm">
@@ -109,7 +98,7 @@ export const RecipeForm = ({ setRecipes }) => {
                     }
                 } />
             </fieldset>
-            <button className="submit__recipe__button" onClick={(clickEvent) => handlePostRecipeClick(clickEvent)}>Post Your Recipe</button>
+            <button className="submit__recipe__button" onClick={(clickEvent) => handleSaveEditsClick(clickEvent)}>Save Edits</button>
         </form>
     )
 }

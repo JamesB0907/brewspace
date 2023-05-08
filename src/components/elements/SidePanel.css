@@ -1,0 +1,17 @@
+.sidepanel {
+    width: 15rem;
+    background-color: #cf8a49;
+    padding: 20px;
+    transition: all 0.3s;
+    overflow: hidden;
+    position: fixed left;
+    left:0;
+    top:0;
+    height:100vh;
+  }
+  
+  .collapsed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+  }

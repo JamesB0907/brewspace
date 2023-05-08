@@ -1,67 +1,100 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "userName": "admin",
-            "email": "admin@brewspace.com"
-        },
-        {
-            "id": 2,
-            "userName": "brewer1",
-            "email": "brewer1@website.com"
-        }
-    ],
-    "recipes": [
-        {
-            "id": 1,
-            "userId": 1,
-            "name": "J's API APA",
-            "style": "American Pale Ale",
-            "malts": "Pale Malt - 8lbs, 8.2oz., Crystal 10 - 11.7 oz.,  Vienna - 11.7 oz. ,Victory - 8.5 oz., Crystal 60 - 5.3 oz. ",
-            "hops": "Magnum - .6 oz, Perle - .5 oz, Fuggle - .5, Fuggle .5 (at 2 minutes)",
-            "yeast": "San Diego Super Yeast by White Labs",
-            "adjuncts": "Gelatin",
-            "recipeGuide": "Single=step mash at 152 degrees Fahrenheit (66.7C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fugglew at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 66 degrees Fahrenheit as possible. Let sit for 5 days then, as an optional step, cold crash and add gelatin before kegging/bottling."
-        },
-        {
-            "id": 2,
-            "userId": 2,
-            "name": "Bob's API APA",
-            "style": "American Pale Ale",
-            "malts": "Pale Malt - 9lbs, 10oz, Crystal 10 - 12oz, Vienna - 14oz, Victory - 10.5oz, Crystal 60 - 7oz",
-            "hops": "Magnum - .8 oz, Perle - .6 oz, Fuggle - .6 oz, Fuggle - .6 oz (at 2 minutes)",
-            "yeast": "California Ale Yeast by White Labs",
-            "adjuncts": "Irish Moss",
-            "recipeGuide": "Single-step mash at 153 degrees Fahrenheit (67.2C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fuggle at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 67 degrees Fahrenheit as possible. Let sit for 6 days then, as an optional step, cold crash and add Irish Moss before kegging/bottling."
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "userId": 2,
-            "recipeId": 1,
-            "commentText": "Wow, this one worked out great! Cheers!"
-        },
-        {
-            "id": 2,
-            "userId": 1,
-            "recipeId": 2,
-            "commentText": "Hey, you copied off my recipe!!"
-        },
-        {
-            "id": 1,
-            "userId": 1,
-            "recipeId": 2,
-            "commentText": "No I didn't!!"
-        }
-    ],
-    "ratings": [
-        {
-            "id": 1,
-            "userId": 2,
-            "recipeId": 1,
-            "isLiked": true 
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "email": "admin@brewspace.com"
+    },
+    {
+      "id": 2,
+      "userName": "brewer1",
+      "email": "brewer1@website.com"
+    },
+    {
+      "id": 3,
+      "userName": "brewer2",
+      "email": "brewer2@website.com"
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "J's API APA",
+      "style": "American Pale Ale",
+      "malts": "Pale Malt - 8lbs, 8.2oz., Crystal 10 - 11.7 oz.,  Vienna - 11.7 oz. ,Victory - 8.5 oz., Crystal 60 - 5.3 oz. ",
+      "hops": "Magnum - .6 oz, Perle - .5 oz, Fuggle - .5, Fuggle .5 (at 2 minutes)",
+      "yeast": "San Diego Super Yeast by White Labs",
+      "adjuncts": "Gelatin",
+      "recipeGuide": "Single=step mash at 152 degrees Fahrenheit (66.7C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fugglew at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 66 degrees Fahrenheit as possible. Let sit for 5 days then, as an optional step, cold crash and add gelatin before kegging/bottling."
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "name": "Bob's API APA",
+      "style": "American Pale Ale",
+      "malts": "Pale Malt - 9lbs, 10oz, Crystal 10 - 12oz, Vienna - 14oz, Victory - 10.5oz, Crystal 60 - 7oz",
+      "hops": "Magnum - .8 oz, Perle - .6 oz, Fuggle - .6 oz, Fuggle - .6 oz (at 2 minutes)",
+      "yeast": "California Ale Yeast by White Labs",
+      "adjuncts": "Irish Moss",
+      "recipeGuide": "Single-step mash at 153 degrees Fahrenheit (67.2C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fuggle at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 67 degrees Fahrenheit as possible. Let sit for 6 days then, as an optional step, cold crash and add Irish Moss before kegging/bottling."
+    },
+    {
+      "userId": 1,
+      "name": "The Stouty Stout",
+      "style": "Irish Dry Stout",
+      "malts": "5.5 lbs. (2.5 kg) pale ale malt 1.25 lbs. (567 g) flaked barley 1 lb. (454 g) roasted barley 0.5 lb. (227 g) chocolate malt 0.25 lb. (113 g) crystal malt (80 °L) 0.25 lb. (113 g) debittered black malt",
+      "hops": "9.6 AAU UK Goldings hops (60 min.) (1.75 oz./50 g at 5.5% alpha acids) 1.4 AAU UK Goldings hops (10 min.) (0.25 oz./7 g at 5.5% alpha acids)",
+      "yeast": "Wyeast 1028 (London Ale), White Labs WLP013 (London Ale), or SafAle S-04 yeast",
+      "adjuncts": "3⁄4 cup corn sugar (for priming)",
+      "recipeGuide": "his recipe uses reverse osmosis (RO) water. Adjust all brewing water to a pH of 5.5 using phosphoric acid. Add 1 tsp. of calcium chloride to the strike water.  This recipe uses a single infusion mash. Use enough water to have a moderately thick mash (1.5 qts./lb. or 3.1 L/kg). Mash in the pale ale malt and flaked barley at 144 °F (62 °C) and hold for 60 minutes. Begin recirculating, add the dark grains and crystal malt, then raise the mash temperature to 169 °F (76 °C), and recirculate for 15 minutes.  Sparge slowly and collect 6.5 gallons (24.5 L) of wort in the brew kettle and bring wort up to a boil. Boil the wort for 90 minutes, adding hops at the times indicated.  Chill the wort to 64 °F (18 °C), pitch the yeast, aerate if necessary, and ferment until complete. Rack the beer, prime and bottle condition, or keg and force carbonate. If you have the means to serve this on a nitro dispense system, it is highly recommended to provide that creamy mouthfeel that the style is well known for.",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "recipeId": 1,
+      "commentText": "Wow, this one worked out great! Cheers!"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "recipeId": 2,
+      "commentText": "Hey, you copied off my recipe!!"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "recipeId": 2,
+      "commentText": "No I didn't!!"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "recipeId": 1,
+      "commentText": "Hey thanks"
+    }
+  ],
+  "ratings": [
+    {
+      "id": 1,
+      "userId": 2,
+      "recipeId": 1,
+      "isLiked": true
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "recipeId": 1,
+      "isLiked": true
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "recipeId": 1,
+      "isLiked": false
+    }
+  ]
 }
-
