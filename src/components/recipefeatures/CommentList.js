@@ -21,8 +21,9 @@ export const CommentList = ({filteredCommentSections}) => {
       };
     return (
         filteredCommentSections.length === 0
-        ? <div className="comment__section__placeholder">There's nothing here...</div>
+        ? <div className="comment__section__placeholder">Be the first to comment</div>
         :<article className="comments__section">
+          <h1 className="comment__section__header">{filteredCommentSections.length} Comments</h1>
             {
                 filteredCommentSections.map(
                     (comment) => {

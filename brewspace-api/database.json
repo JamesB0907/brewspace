@@ -26,7 +26,11 @@
       "yeast": "San Diego Super Yeast by White Labs",
       "adjuncts": "Gelatin",
       "recipeGuide": "Single-step mash at 152 degrees Fahrenheit (66.7C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fugglew at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 66 degrees Fahrenheit as possible. Let sit for 5 days then, as an optional step, cold crash and add gelatin before kegging/bottling.",
-      "id": 1
+      "id": 1,
+      "likes": {
+        "count": 0,
+        "users": []
+      }
     },
     {
       "id": 2,
@@ -37,7 +41,11 @@
       "hops": "Magnum - .8 oz, Perle - .6 oz, Fuggle - .6 oz, Fuggle - .6 oz (at 2 minutes)",
       "yeast": "California Ale Yeast by White Labs",
       "adjuncts": "Irish Moss",
-      "recipeGuide": "Single-step mash at 153 degrees Fahrenheit (67.2C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fuggle at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 67 degrees Fahrenheit as possible. Let sit for 6 days then, as an optional step, cold crash and add Irish Moss before kegging/bottling."
+      "recipeGuide": "Single-step mash at 153 degrees Fahrenheit (67.2C) for 60 minutes and do not sparge. Magnum at 60 minutes, Perle at 25 minutes, first addition of Fuggle at 10 minutes, second addition at 2 minutes. A rolling boil is recommended. Pitch the yeast after cooldown and ferment at as close to 67 degrees Fahrenheit as possible. Let sit for 6 days then, as an optional step, cold crash and add Irish Moss before kegging/bottling.",
+      "likes": {
+        "count": 0,
+        "users": []
+      }
     },
     {
       "userId": 1,
@@ -48,7 +56,11 @@
       "yeast": "Wyeast 1028 (London Ale), White Labs WLP013 (London Ale), or SafAle S-04 yeast",
       "adjuncts": "3⁄4 cup corn sugar (for priming)",
       "recipeGuide": "This recipe uses reverse osmosis (RO) water. Adjust all brewing water to a pH of 5.5 using phosphoric acid. Add 1 tsp. of calcium chloride to the strike water.  This recipe uses a single infusion mash. Use enough water to have a moderately thick mash (1.5 qts./lb. or 3.1 L/kg). Mash in the pale ale malt and flaked barley at 144 °F (62 °C) and hold for 60 minutes. Begin recirculating, add the dark grains and crystal malt, then raise the mash temperature to 169 °F (76 °C), and recirculate for 15 minutes.  Sparge slowly and collect 6.5 gallons (24.5 L) of wort in the brew kettle and bring wort up to a boil. Boil the wort for 90 minutes, adding hops at the times indicated.  Chill the wort to 64 °F (18 °C), pitch the yeast, aerate if necessary, and ferment until complete. Rack the beer, prime and bottle condition, or keg and force carbonate. If you have the means to serve this on a nitro dispense system, it is highly recommended to provide that creamy mouthfeel that the style is well known for.",
-      "id": 3
+      "id": 3,
+      "likes": {
+        "count": 0,
+        "users": []
+      }
     }
   ],
   "comments": [
@@ -75,30 +87,11 @@
     },
     {
       "userId": 1,
-      "recipeId": 2,
-      "commentText": "test",
-      "timestamp": 1683689543441,
+      "recipeId": 3,
+      "commentText": "hey",
+      "timestamp": 1683732416011,
       "id": 4
     }
   ],
-  "ratings": [
-    {
-      "id": 1,
-      "userId": 2,
-      "recipeId": 1,
-      "isLiked": true
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "recipeId": 1,
-      "isLiked": true
-    },
-    {
-      "id": 3,
-      "userId": 3,
-      "recipeId": 1,
-      "isLiked": false
-    }
-  ]
+  "likes": []
 }

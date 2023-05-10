@@ -1,59 +1,38 @@
-// import { useEffect, useState } from "react"
-// import { getRatings, likeOrDislike } from "../APIManager"
+import { useState } from "react"
+import { FaBeer } from "react-icons/fa"
+import "./Features.css"
 
-// export const LikeCounter = () => {
-//     const [likes, setLikes] = useState([])
-//     const [ratings, update] = useState([])
+export const LikeCounter = () => {
+  const [likes, setLikes] = useState(0)
+  const [likeDirection, setLikeDirection] = useState(null)
 
-//     const localBrewspaceUser = localStorage.getItem("brewspace_user")
-//     const brewspaceUserObject = JSON.parse(localBrewspaceUser)
+  const handleLike = () => {
+    setLikeDirection("increase")
+    setLikes(likes + 1)
+  }
 
-//     const clickLike = (evt) => {
-//         evt.preventDefault()
+  const handleDislike = () => {
+    setLikeDirection("decrease")
+    setLikes(likes - 1)
+  }
 
-//         const sentLike = {
-//             userId: brewspaceUserObject.userId,
-//             recipeId: ratings.recipeId,
-//             isLiked: true
-//         }
-//         return likeOrDislike(sentLike)
-//             .then(getRatings())
-//     }
+  const handleAnimationEnd = () => {
+    setLikeDirection(null)
+  }
 
-//     const clickDislike = (evt) => {
-//         evt.preventDefault()
+  const likeCountClassName = `like__count ${likeDirection ? `like__count--${likeDirection}` : ""}`
 
-//         const sentDislike = {
-//             userId: brewspaceUserObject.userId,
-//             recipeId: ratings.recipeId,
-//             isLiked: false
-//         }
-//         return likeOrDislike(sentDislike)
-//             .then(getRatings())
-//     }
-
-//     useEffect(
-//         () => {
-//             getRatings()
-//                 .then((data) => {
-//                     update(data)
-//                 })
-//         },
-//         []
-//     )
-    
-//     const likeCount = ratings.filter(rating => rating.isLiked === true).length
-//     const dislikeCount = ratings.filter(rating => rating.isLiked === false).length
-   
-//     const trueRating = likeCount - dislikeCount
-
-
-//     //getLikes then use .length to determine the number of isLiked: true and isLiked: false
-//     return (
-//         <>
-//             <button onClick={(clickEvent) => clickLike(clickEvent)}>Like</button>
-//             <div className="like__count">{trueRating}</div>
-//             <button onClick={(clickEvent) => clickDislike(clickEvent)}>Disike</button>
-//         </>
-//     )
-// }
+  return (
+    <div className="like-counter">
+      <button className="like-button" onClick={handleLike}>
+        <FaBeer />
+      </button>
+      <span className={likeCountClassName} onAnimationEnd={handleAnimationEnd}>
+        {likes}
+      </span>
+      <button className="dislike-button" onClick={handleDislike}>
+        <FaBeer />
+      </button>
+    </div>
+  )
+}

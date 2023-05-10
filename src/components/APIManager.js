@@ -1,4 +1,4 @@
-import { unstable_renderSubtreeIntoContainer } from "react-dom"
+
 
 export const getRecipes = () => {
     return fetch(`http://localhost:8088/recipes?_expand=user&_sort=id&_order=desc`)
@@ -34,17 +34,6 @@ export const postComment = (commentObject) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(commentObject)
-    })
-        .then(r => r.json())
-}
-
-export const likeOrDislike = (ratingObject) => {
-    return fetch(`http://localhost:8088/ratings`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(ratingObject)
     })
         .then(r => r.json())
 }

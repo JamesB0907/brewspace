@@ -28,7 +28,8 @@ export const RecipeForm = ({ setRecipes }) => {
             hops: recipe.hops,
             yeast: recipe.yeast,
             adjuncts: recipe.adjuncts,
-            recipeGuide: recipe.recipeGuide
+            recipeGuide: recipe.recipeGuide,
+            likes: 0
         }
         return postRecipe(newRecipe)
             .then(getRecipes)

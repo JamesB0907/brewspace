@@ -9,6 +9,7 @@
     top:0;
     height:100;
     background: linear-gradient(217deg, #be7027de, #ca8b3893);
+    border-right: double hsl(34, 57%, 70%);
   }
   
   .collapsed {

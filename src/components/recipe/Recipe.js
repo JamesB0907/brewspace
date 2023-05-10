@@ -69,7 +69,9 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
 
     const deleteButton = (evt) => {
         if (brewspaceUserObject.id === recipeObject.userId) {
-            return <button onClick={() => {
+            return <button 
+            className="delete__button"
+            onClick={() => {
                 deleteRecipe(recipeObject)
                     .then(() => getRecipes())
                     .then((newRecipeArray) => setRecipes(newRecipeArray))
@@ -82,7 +84,7 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
 
     const editFormButton = (evt) => {
         if (brewspaceUserObject.id === recipeObject.userId) {
-            return <button onClick={openModal}>Edit</button>
+            return <button className="edit__button" onClick={openModal}>Edit</button>
         }
         else {
             return ""
@@ -91,10 +93,11 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
 
     return (
         <>
-            {/* <LikeCounter/> */}
+            
 
             <section className="recipe" key={`recipe--${recipeObject.id}`}>
-                <h1 className="recipe__name">Name: <span style={{ fontSize: '2rem' }}>{recipeObject.name}</span></h1>
+                <LikeCounter/>
+                <h1 className="recipe__name">Name: <span style={{ fontSize: '1.70rem' }}>{recipeObject.name}</span></h1>
                 <h1 className="user__submitted">By: {recipeObject?.user?.userName}</h1>
                 <h3 className="recipe__style__header">Style:</h3>
                 <div className="recipe__style">{recipeObject.style}</div>
@@ -121,7 +124,6 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
 
             </section>
             <section className="comment__section__container">
-                <h1 className="comment__section__header">{filteredCommentSections.length} Comments</h1>
                 <CommentList key={filteredCommentSections.id} filteredCommentSections={filteredCommentSections} />
                 <textarea type="text" className="comment__input__box" value={comment.commentText} placeholder="Add a Comment..." onChange={
                     (e) => {

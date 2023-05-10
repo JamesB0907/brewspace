@@ -6,19 +6,22 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    width: 40rem;
-    height:10rem;
+    width: 30rem;
+    height:4rem;
+    border: double rgb(97, 76, 48);
+    margin-left: 10px;
   }
   
   .comment__input__box textarea {
     width: 100%;
-    height: 120px;
+    height: 100px;
     border: none;
     resize: none;
     font-size: 16px;
     font-family: inherit;
     line-height: 1.5;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    
   }
   
   .comment__submit__button {
@@ -30,6 +33,9 @@
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border:double burlywood
   }
   
   .comment__submit__button:hover {
@@ -42,6 +48,7 @@
     color: chocolate;
     filter: text-shadow(rgb(58, 35, 6) 2px)
   }
+
 .comment__timestamp {
     font-size: .8rem;
     color: grey;
@@ -50,4 +57,90 @@
     margin-left: 1px;
     font-style: italic;
 }
+.comment__section__header{
+  padding-top: 10px;
+  margin-left:15px;
+}
 
+.comment__section__placeholder{
+  padding:2.5rem;
+  background-color: #bb862444;
+  text-align: center;
+  height: 2rem;
+  color: #33333394;
+  font-size: 20px
+}
+
+.comment__section__container{
+  background-color: #bb862444;
+}
+.comment__container{
+  margin-left:10px;
+}
+.like-counter {
+  display: flex;
+  align-items: center;
+}
+
+.like-button,
+.dislike-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 0rem;
+}
+
+.like-button{
+  color:rgb(43, 32, 20)
+}
+
+.dislike-button {
+  color:rgb(163, 25, 25);
+}
+
+.like-button:hover{
+  color: #bb8624; /* change color on hover */
+}
+
+.dislike-button:hover{
+  color:rgb(95, 12, 12)
+}
+
+.like__count {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+.like__count--increase {
+  animation: flashIncrease .25s;
+}
+
+.like__count--decrease {
+  animation: flashDecrease .25s;
+}
+
+@keyframes flashIncrease {
+  0% {
+    color: #333;
+  }
+  50% {
+    color: #e4ad379d; /* change to desired color when increasing */
+  }
+  100% {
+    color: #333;
+  }
+}
+
+@keyframes flashDecrease {
+  0% {
+    color: #333;
+  }
+  50% {
+    color: #7e3e399c; /* change to desired color when decreasing */
+  }
+  100% {
+    color: #333;
+  }
+}

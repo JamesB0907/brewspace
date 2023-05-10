@@ -11,6 +11,10 @@
     font-size: larger;
 }
 
+.recipe__name {
+    margin-top: 0;
+}
+
 .recipe {
     background: linear-gradient(217deg, #9c4817, #ca8b3893);
     padding: 1rem;
@@ -61,6 +65,27 @@
     font-size: large;
 }
 
+.delete__button,
+.edit__button{
+    background-color: rgb(97, 71, 42);
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 10px;
+    border: burlywood double;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 5rem;
+    height: 2.7rem;
+    position: relative;
+    font-size: large;
+}
+
+.delete__button{
+    margin-right: 4px;
+}
+
 .edit__window {
     width: 30rem;
     justify-content: center;
@@ -80,46 +105,31 @@
 }
 
 .recipeEditForm label {
-    display: block;
     margin-bottom: 10px;
+    width:28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.recipe__edit__input,
-.recipe__edit__ingredients,
-.recipe__edit__guide {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid rgb(160, 113, 60);
-    font-size: 16px;
+.recipe__ingredients__edit, .recipe__guide__edit{
+    display: flex;
+    flex-direction: column;
 }
 .recipe__edit__input {
-    padding-bottom: 7px;
-    width: 15rem;
+    height: 1.25rem;
+    width: 12rem;
+    position: relative;
+    left:28%
 }
 
 .recipe__edit__ingredients {
-    padding-bottom: 4rem;
-    width: 20rem
+    height: 4rem;
 }
 
-.recipe__edit__guide {
-    padding-bottom: 10rem;
-    width: 20rem;
+.recipe__edit__guide{
+    height:5rem;
 }
-
-.recipe__guide__edit {
-    position: relative;
-    padding: 100px;
-}
-
-.recipe__ingredients__edit {
-    position: relative;
-    padding: 100px;
-}
-
-
 .submit__edits__button {
     background-color: rgb(97, 71, 42);
     color: white;
@@ -131,7 +141,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
     position: relative;
-    left: 25%;
+    left: 37%;
 }
 
 .submit__edits__button:hover {
