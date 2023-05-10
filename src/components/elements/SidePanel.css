@@ -1,13 +1,14 @@
 .sidepanel {
-    width: 15rem;
-    background-color: #cf8a49;
+    width: 25rem;
+    background-color: #d38b47;
     padding: 20px;
     transition: all 0.3s;
     overflow: hidden;
     position: fixed left;
     left:0;
     top:0;
-    height:100vh;
+    height:100;
+    background: linear-gradient(217deg, #be7027de, #ca8b3893);
   }
   
   .collapsed {

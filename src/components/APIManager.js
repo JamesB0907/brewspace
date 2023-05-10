@@ -1,3 +1,5 @@
+import { unstable_renderSubtreeIntoContainer } from "react-dom"
+
 export const getRecipes = () => {
     return fetch(`http://localhost:8088/recipes?_expand=user&_sort=id&_order=desc`)
         .then(r => r.json())
@@ -69,3 +71,7 @@ export const editRecipe = (recipeObject) => {
         .then(r => r.json())
 }
 
+export const getSingleRecipe = (recipeObject) => {
+    return fetch(`http://localhost:8088/recipes/${recipeObject.id}`)
+        .then(r=>r.json())
+}

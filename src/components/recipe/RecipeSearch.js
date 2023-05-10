@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './Recipe.css';
 
-
-export const RecipeSearch = ({ setterFunction, searchTermState, searchFunction, recipes}) => {
-
+export const RecipeSearch = ({ setterFunction, searchTermState, handleSearch, handleKeyPress }) => {
+  
   const handleInputChange = (event) => {
-    setterFunction(event.target.value)
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    searchFunction()
-  }
+    setterFunction(event.target.value);
+  };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={searchTermState} onChange={handleInputChange} placeholder="Enter Your Search" />
-      <button type="submit">Search</button>
+    <form className="search__container" onSubmit={handleSearch}>
+      <input autoFocus 
+      type="search"
+      autoComplete="off"
+      value={searchTermState}
+      onChange={handleInputChange}
+      onKeyDown={handleKeyPress}
+      placeholder="Enter Your Search" />
+      <button type="submit"></button>
     </form>
-  )
-}
+  );
+};

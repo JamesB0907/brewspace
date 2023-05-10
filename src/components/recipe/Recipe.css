@@ -1,24 +1,190 @@
-.recipeForm {
+.recipeForm,
+.recipe__ingredients,
+.recipe__guide {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+.recipe__style, .recipe__malts, .recipe__hops, .recipe__yeast,
+.recipe__adjuncts, .recipe__guide, .recipe__name {
+    font-size: larger;
+}
+
+.recipe {
+    background: linear-gradient(217deg, #9c4817, #ca8b3893);
+    padding: 1rem;
+    margin-top: 1rem;
+    border: double burlywood;
 }
 
 .recipe__page {
     width: 50vw;
+    padding-left: 20px;
+    margin-top: 20px;
+    color: #160a01;
+    font-size: large;
 }
 
 .flex__container {
-  display: flex; 
+    display: flex;
 }
 
 .recipe__form__input {
-    padding-bottom:7px
+    padding-bottom: 7px;
+    width: 15rem;
 }
 
 .recipe__form__ingredients {
-    padding-bottom: 50px;
+    padding-bottom: 4rem;
+    width: 20rem
 }
 
 .recipe__form__guide {
-    padding-bottom: 30px;
+    padding-bottom: 10rem;
+    width: 20rem;
 }
+
+.submit__recipe__button {
+    background-color: rgb(97, 71, 42);
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 11.5rem;
+    height: 4rem;
+    position: relative;
+    font-size: large;
+}
+
+.edit__window {
+    width: 30rem;
+    justify-content: center;
+    background-color: rgb(179, 124, 62);
+    opacity: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid rgb(179, 124, 62);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recipeEditForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.recipe__edit__input,
+.recipe__edit__ingredients,
+.recipe__edit__guide {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(160, 113, 60);
+    font-size: 16px;
+}
+.recipe__edit__input {
+    padding-bottom: 7px;
+    width: 15rem;
+}
+
+.recipe__edit__ingredients {
+    padding-bottom: 4rem;
+    width: 20rem
+}
+
+.recipe__edit__guide {
+    padding-bottom: 10rem;
+    width: 20rem;
+}
+
+.recipe__guide__edit {
+    position: relative;
+    padding: 100px;
+}
+
+.recipe__ingredients__edit {
+    position: relative;
+    padding: 100px;
+}
+
+
+.submit__edits__button {
+    background-color: rgb(97, 71, 42);
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    left: 25%;
+}
+
+.submit__edits__button:hover {
+    background-color: rgba(88, 60, 28, 0.986);
+}
+
+.recipeEditForm:focus {
+    outline: none;
+}
+
+label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px
+}
+
+textarea {
+    resize: none;
+}
+
+.search__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #e8e8e8;
+    overflow: hidden;
+}
+
+input[type="search"] {
+    flex-grow: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: rgba(133, 65, 26, 0.836);
+}
+
+button[type="submit"] {
+    height: 100%;
+    width: 35px;
+    border: none;
+    outline: none;
+    background-color: #d1853f;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/149/149852.png");
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}
+
+.search__container input::placeholder {
+    color: bisque;
+  }
 

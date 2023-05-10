@@ -3,10 +3,24 @@ import { deleteRecipe, getComments, getRecipes, postComment } from "../APIManage
 import { CommentList } from "../recipefeatures/CommentList"
 import "./Recipe.css"
 import { LikeCounter } from "../recipefeatures/Likes"
+import Modal from 'react-modal'
+import { RecipeEdit } from "./RecipeEdit"
+import "../recipefeatures/Features.css"
 
 export const Recipe = ({ recipeObject, setRecipes }) => {
     const [commentSections, setCommentSections] = useState([])
     const [filteredCommentSections, setFiltered] = useState([])
+    const [modalIsOpen, setModalIsOpen] = useState(false)
+
+    Modal.setAppElement('#root');
+
+    const openModal = () => {
+        setModalIsOpen(true)
+    }
+
+    const closeModal = () => {
+        setModalIsOpen(false)
+    }
 
     useEffect(
         () => {
@@ -41,7 +55,8 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
         const newComment = {
             userId: brewspaceUserObject.id,
             recipeId: recipeObject.id,
-            commentText: comment.commentText
+            commentText: comment.commentText,
+            timestamp: Date.now()
         }
         return postComment(newComment)
             .then(getComments)
@@ -54,7 +69,7 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
 
     const deleteButton = (evt) => {
         if (brewspaceUserObject.id === recipeObject.userId) {
-            return <button onClick={()=>{
+            return <button onClick={() => {
                 deleteRecipe(recipeObject)
                     .then(() => getRecipes())
                     .then((newRecipeArray) => setRecipes(newRecipeArray))
@@ -67,9 +82,7 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
 
     const editFormButton = (evt) => {
         if (brewspaceUserObject.id === recipeObject.userId) {
-            return <button onClick={()=>{
-//<RecipeEdit/>
-            }}>Edit</button>
+            return <button onClick={openModal}>Edit</button>
         }
         else {
             return ""
@@ -81,8 +94,8 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
             {/* <LikeCounter/> */}
 
             <section className="recipe" key={`recipe--${recipeObject.id}`}>
-                <h1 className="recipe__name">Name: <span style={{ fontSize: '1.45rem' }}>{recipeObject.name}</span></h1>
-                <h1 className="user__submitted">By: {recipeObject.user.userName}</h1>
+                <h1 className="recipe__name">Name: <span style={{ fontSize: '2rem' }}>{recipeObject.name}</span></h1>
+                <h1 className="user__submitted">By: {recipeObject?.user?.userName}</h1>
                 <h3 className="recipe__style__header">Style:</h3>
                 <div className="recipe__style">{recipeObject.style}</div>
                 <h3 className="recipe__malts__header">Malts:</h3>
@@ -98,21 +111,29 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
                 {
                     deleteButton()
                 }
+                {
+                    editFormButton()
+                }
+                <Modal className="edit__window" isOpen={modalIsOpen} onRequestClose={closeModal}>
+                    <RecipeEdit setRecipes={setRecipes} recipeObject={recipeObject} closeModal={closeModal} />
+                </Modal>
 
 
             </section>
-
-            <CommentList key={filteredCommentSections.id} filteredCommentSections={filteredCommentSections} />
-            <input type="text" className="input__box" value={comment.commentText} onChange={
-                (e) => {
-                    const copy = { ...comment }
-                    copy.commentText = e.target.value
-                    update(copy)
-                }
-            } />
-            <button onClick={
-                (clickEvent) => { handleCommentSubmit(clickEvent) }
-            }>Submit Comment</button>
+            <section className="comment__section__container">
+                <h1 className="comment__section__header">{filteredCommentSections.length} Comments</h1>
+                <CommentList key={filteredCommentSections.id} filteredCommentSections={filteredCommentSections} />
+                <textarea type="text" className="comment__input__box" value={comment.commentText} placeholder="Add a Comment..." onChange={
+                    (e) => {
+                        const copy = { ...comment }
+                        copy.commentText = e.target.value
+                        update(copy)
+                    }
+                }></textarea>
+                <button className="comment__submit__button" onClick={
+                    (clickEvent) => { handleCommentSubmit(clickEvent) }
+                }>Submit Comment</button>
+            </section >
         </>
     )
 }

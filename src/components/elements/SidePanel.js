@@ -8,16 +8,17 @@ export const SidePanel = ({ setRecipes }) => {
   return (
     <>
       <article className={`sidepanel ${isCollapsed ? 'collapsed' : ''}`}>
-        <RecipeForm setRecipes={setRecipes} />
+        <RecipeForm 
+        className="form__container"
+        setRecipes={setRecipes} />
       </article>
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
         style={{
           width: '40px',
-          height: '40px',
-          borderRadius: '50%',
+          height: '40px', 
           border: 'none',
-          backgroundColor: '#f2f2f2',
+          backgroundColor: '#be7027',
           marginRight: '10px',
           transition: 'all 0.3s',
           transform: isCollapsed ? 'rotate(180deg)' : 'rotate(0deg)',

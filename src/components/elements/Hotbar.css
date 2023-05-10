@@ -1,23 +1,37 @@
-.hotbar {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
-    position:fixed 0;
-    border-bottom: solid;
-}
-
 .hotbar__item {
     flex-basis: 20%;
     list-style-type: none;
-}
-
-.hotbar__logout {
-    margin-left: auto;
-}
-
-.search__frame {
     justify-content: center;
-    display: flex;
-    
 }
 
+.hotbar {
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed 0;
+    border-bottom: solid thick double rgb(143, 78, 17);
+    justify-content: space-between;
+    background-image: url("C:\Users\James AKA BOSSMAN\workspace\brewspace\assets\beerbannerv2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    height: 100px;
+}
+
+.hotbar__link:link, .hotbar__link:visited {
+    background-color: rgb(143, 78, 17);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .hotbar__link:hover, .hotbar__link:active {
+    background-color: rgb(141, 86, 13);
+  }
+.brewspace__header {
+    background-image: url("C:\Users\James AKA BOSSMAN\workspace\brewspace\assets\BrewSpace-word-art.png");
+    width: 400px;
+    height: 100px;
+    filter: contrast(1.1) sepia(0) hue-rotate(-14deg) brightness(1.6);
+}
