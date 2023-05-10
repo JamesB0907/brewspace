@@ -8,7 +8,7 @@
 }
 .recipe__style, .recipe__malts, .recipe__hops, .recipe__yeast,
 .recipe__adjuncts, .recipe__guide, .recipe__name {
-    font-size: larger;
+    font-size: large;
 }
 
 .recipe__name {
@@ -30,15 +30,41 @@
     font-size: large;
 }
 
+.recipe__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  .recipe__content {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .recipe__image {
+    max-width: 150px;
+    border: thick solid #160a01;
+    margin-right: 20px;
+  }
+  
+  
 .flex__container {
     display: flex;
+}
+
+.recipeForm__header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
 }
 
 .recipe__form__input {
     padding-bottom: 7px;
     width: 15rem;
 }
-
+.recipe__form__photo {
+    width:20rem;
+    margin-bottom: 10px;
+}
 .recipe__form__ingredients {
     padding-bottom: 4rem;
     width: 20rem
@@ -87,25 +113,32 @@
 }
 
 .edit__window {
-    width: 30rem;
+    width: 31rem;
     justify-content: center;
     background-color: rgb(179, 124, 62);
     opacity: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 50px;
     border: 2px solid rgb(179, 124, 62);
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: 50%;
+    top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 70vh;
+    margin-top: 20px;
+    overflow-y: auto; 
+}
+
+.recipeEditForm {
+    padding-top: 50px;
+
 }
 
 .recipeEditForm label {
-    margin-bottom: 10px;
     width:28rem;
     display: flex;
     align-items: center;
@@ -122,7 +155,12 @@
     position: relative;
     left:28%
 }
-
+.recipe__edit__photo{
+    position: relative;
+    left:9%;
+    height: 1.25rem;
+    width: 25rem;
+}
 .recipe__edit__ingredients {
     height: 4rem;
 }
@@ -154,7 +192,6 @@
 
 label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px
 }
 
 textarea {
@@ -182,7 +219,7 @@ input[type="search"] {
     background-color: rgba(133, 65, 26, 0.836);
 }
 
-button[type="submit"] {
+.recipe__search__button {
     height: 100%;
     width: 35px;
     border: none;

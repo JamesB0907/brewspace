@@ -51,9 +51,9 @@
 
 .comment__timestamp {
     font-size: .8rem;
-    color: grey;
+    color: rgba(119, 119, 119, 0.815);
     font-weight: 0;
-    opacity: 50%;
+    opacity: 55%;
     margin-left: 1px;
     font-style: italic;
 }
@@ -63,8 +63,9 @@
 }
 
 .comment__section__placeholder{
+  margin-top:20px;
   padding:2.5rem;
-  background-color: #bb862444;
+  background-color: #bb862400;
   text-align: center;
   height: 2rem;
   color: #33333394;
@@ -109,7 +110,7 @@
 
 .like__count {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 21px;
   color: #333;
 }
 
@@ -126,7 +127,7 @@
     color: #333;
   }
   50% {
-    color: #e4ad379d; /* change to desired color when increasing */
+    color: #e7d7b59d; /* change to desired color when increasing */
   }
   100% {
     color: #333;
@@ -138,7 +139,7 @@
     color: #333;
   }
   50% {
-    color: #7e3e399c; /* change to desired color when decreasing */
+    color: #b61a0f9c; /* change to desired color when decreasing */
   }
   100% {
     color: #333;

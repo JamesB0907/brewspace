@@ -11,7 +11,8 @@ export const RecipeForm = ({ setRecipes }) => {
         hops: "",
         yeast: "",
         adjuncts: "",
-        recipeGuide: ""
+        recipeGuide: "",
+        photoUrl: ""
     })
 
     const localBrewspaceUser = localStorage.getItem("brewspace_user")
@@ -29,7 +30,7 @@ export const RecipeForm = ({ setRecipes }) => {
             yeast: recipe.yeast,
             adjuncts: recipe.adjuncts,
             recipeGuide: recipe.recipeGuide,
-            likes: 0
+            photoUrl: recipe.photoUrl
         }
         return postRecipe(newRecipe)
             .then(getRecipes)
@@ -43,13 +44,15 @@ export const RecipeForm = ({ setRecipes }) => {
                 hops: "",
                 yeast: "",
                 adjuncts: "",
-                recipeGuide: ""
+                recipeGuide: "",
+                photoUrl: ""
             }))
 
 
     }
     return (
 <form className="recipeForm">
+    <h1 className="recipeForm__header">Post Your Recipe</h1>
     <fieldset className="recipe__ingredients">
         <label htmlFor="name">Your Beer's Name:</label>
         <textarea className="recipe__form__input" value={recipe.name} onChange={(e) => {
@@ -88,6 +91,16 @@ export const RecipeForm = ({ setRecipes }) => {
             update(copy)
         }} />
     </fieldset>
+    <label htmlFor="photoUrl">Photo URL:</label>
+    <textarea
+      className="recipe__form__photo"
+      value={recipe.photoUrl}
+      onChange={(e) => {
+        const copy = { ...recipe };
+        copy.photoUrl = e.target.value;
+        update(copy);
+      }}
+    />
     <fieldset className="recipe__guide">
         <label htmlFor="guide">Describe the Process:</label>
         <textarea className="recipe__form__guide" value={recipe.recipeGuide} onChange={(e) => {

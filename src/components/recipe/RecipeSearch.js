@@ -16,7 +16,7 @@ export const RecipeSearch = ({ setterFunction, searchTermState, handleSearch, ha
       onChange={handleInputChange}
       onKeyDown={handleKeyPress}
       placeholder="Enter Your Search" />
-      <button type="submit"></button>
+      <button className="recipe__search__button" type="submit"></button>
     </form>
   );
 };

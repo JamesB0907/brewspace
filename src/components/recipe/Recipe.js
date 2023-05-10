@@ -96,21 +96,32 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
             
 
             <section className="recipe" key={`recipe--${recipeObject.id}`}>
-                <LikeCounter/>
-                <h1 className="recipe__name">Name: <span style={{ fontSize: '1.70rem' }}>{recipeObject.name}</span></h1>
-                <h1 className="user__submitted">By: {recipeObject?.user?.userName}</h1>
-                <h3 className="recipe__style__header">Style:</h3>
-                <div className="recipe__style">{recipeObject.style}</div>
-                <h3 className="recipe__malts__header">Malts:</h3>
-                <div className="recipe__malts">{recipeObject.malts}</div>
-                <h3 className="recipe__hops__header">Hops:</h3>
-                <div className="recipe__hops">{recipeObject.hops}</div>
-                <h3 className="recipe__yeast__header">Yeast:</h3>
-                <div className="recipe__yeast"> {recipeObject.yeast}</div>
-                <h3 className="recipe__adjuncts__header">Adjuncts:</h3>
-                <div className="recipe__adjuncts">{recipeObject.adjuncts}</div>
-                <h2 className="recipe__guide__header">Recipe Guide:</h2>
-                <div className="recipe__guide">{recipeObject.recipeGuide}</div>
+  <LikeCounter/>
+  <div className="recipe__wrapper">
+    <div className="recipe__content">
+      <div className="recipe__info">
+        <h1 className="recipe__name">Name: <span style={{ fontSize: '1.70rem' }}>{recipeObject.name}</span></h1>
+        <h1 className="user__submitted">By: {recipeObject?.user?.userName}</h1>
+        <h3 className="recipe__style__header">Style:</h3>
+        <div className="recipe__style">{recipeObject.style}</div>
+        <h3 className="recipe__malts__header">Malts:</h3>
+        <div className="recipe__malts">{recipeObject.malts}</div>
+        <h3 className="recipe__hops__header">Hops:</h3>
+        <div className="recipe__hops">{recipeObject.hops}</div>
+        <h3 className="recipe__yeast__header">Yeast:</h3>
+        <div className="recipe__yeast"> {recipeObject.yeast}</div>
+        <h3 className="recipe__adjuncts__header">Adjuncts:</h3>
+        <div className="recipe__adjuncts">{recipeObject.adjuncts}</div>
+        <h2 className="recipe__guide__header">Recipe Guide:</h2>
+        <div className="recipe__guide">{recipeObject.recipeGuide}</div>
+      </div>
+    </div>
+    {recipeObject.photoUrl &&
+      <div>
+        <img className="recipe__image" src={recipeObject.photoUrl} alt="Beer" />
+      </div>
+    }
+  </div>
                 {
                     deleteButton()
                 }
