@@ -100,7 +100,8 @@ export const Recipe = ({ recipeObject, setRecipes }) => {
   <div className="recipe__wrapper">
     <div className="recipe__content">
       <div className="recipe__info">
-        <h1 className="recipe__name">Name: <span style={{ fontSize: '1.70rem' }}>{recipeObject.name}</span></h1>
+        <h1 className="recipe__name">Name: <span 
+        className="recipe__name__header">{recipeObject.name}</span></h1>
         <h1 className="user__submitted">By: {recipeObject?.user?.userName}</h1>
         <h3 className="recipe__style__header">Style:</h3>
         <div className="recipe__style">{recipeObject.style}</div>

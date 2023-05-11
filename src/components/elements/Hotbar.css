@@ -15,6 +15,7 @@
     background-size: cover;
     align-items: center;
     height: 100px;
+    border-bottom: rgba(43, 32, 20, 0.829) 6px solid;
 }
 
 .hotbar__link:link, .hotbar__link:visited {

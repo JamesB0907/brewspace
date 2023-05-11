@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+
+body{
+    font-family: 'Noticia';
+}
+
+.recipe__name__header {
+    color: #2e0902;
+    font-weight: 1000;
+    font-size: xx-large;
+}
+
 .recipeForm,
 .recipe__ingredients,
 .recipe__guide {
@@ -54,8 +66,9 @@
 }
 
 .recipeForm__header {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-family: 'Noticia';
+    font-weight: bolder;
+    font-size: 33px;
 }
 
 .recipe__form__input {
@@ -191,10 +204,6 @@
     outline: none;
 }
 
-label {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 textarea {
     resize: none;
 }
@@ -235,4 +244,5 @@ input[type="search"] {
 .search__container input::placeholder {
     color: bisque;
   }
+
 
