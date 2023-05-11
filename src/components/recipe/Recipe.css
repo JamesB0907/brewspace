@@ -46,6 +46,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: start;
+    padding-left: 12px;
+    padding-bottom: 12px;
   }
   
   .recipe__content {
