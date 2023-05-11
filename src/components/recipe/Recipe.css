@@ -43,6 +43,7 @@
   
   .recipe__image {
     max-width: 150px;
+    max-height: 150px;
     border: thick solid #160a01;
     margin-right: 20px;
   }

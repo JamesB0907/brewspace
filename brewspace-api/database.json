@@ -14,6 +14,21 @@
       "id": 3,
       "userName": "brewer2",
       "email": "brewer2@website.com"
+    },
+    {
+      "id": 4,
+      "userName": "Beercrazy89",
+      "email": "joe@website.com"
+    },
+    {
+      "id": 5,
+      "userName": "PastryStoutFan1",
+      "email": "moe@website.com"
+    },
+    {
+      "id": 6,
+      "userName": "FarmhouseGuy",
+      "email": "sam@brewhouse.org"
     }
   ],
   "recipes": [
@@ -51,6 +66,77 @@
       "adjuncts": "3⁄4 cup corn sugar (for priming)",
       "recipeGuide": "This recipe uses reverse osmosis (RO) water. Adjust all brewing water to a pH of 5.5 using phosphoric acid. Add 1 tsp. of calcium chloride to the strike water.  This recipe uses a single infusion mash. Use enough water to have a moderately thick mash (1.5 qts./lb. or 3.1 L/kg). Mash in the pale ale malt and flaked barley at 144 °F (62 °C) and hold for 60 minutes. Begin recirculating, add the dark grains and crystal malt, then raise the mash temperature to 169 °F (76 °C), and recirculate for 15 minutes.  Sparge slowly and collect 6.5 gallons (24.5 L) of wort in the brew kettle and bring wort up to a boil. Boil the wort for 90 minutes, adding hops at the times indicated.  Chill the wort to 64 °F (18 °C), pitch the yeast, aerate if necessary, and ferment until complete. Rack the beer, prime and bottle condition, or keg and force carbonate. If you have the means to serve this on a nitro dispense system, it is highly recommended to provide that creamy mouthfeel that the style is well known for.",
       "id": 3
+    },
+    {
+      "userId": 3,
+      "name": "Belgian Dubbel",
+      "style": "Belgian Dubbel",
+      "malts": "Pilsner malt - 8lbs (3.63 kg), Munich malt - 1.5lbs (0.68 kg), Aromatic malt - 0.5lbs (0.23 kg), Special B malt - 0.5lbs (0.23 kg)",
+      "hops": "Styrian Goldings - 1.5 oz (42.5 g) at 60 minutes, Saaz - 1 oz (28.35 g) at 10 minutes",
+      "yeast": "Belgian Abbey Ale Yeast by White Labs",
+      "adjuncts": "Candi sugar - 1 lb (0.45 kg)",
+      "recipeGuide": "Mash all grains at 152°F (67°C) for 60 minutes. Sparge with water at 170°F (77°C) to collect enough wort for boil. Boil for 60 minutes, adding Styrian Goldings hops at the beginning of the boil and Saaz hops during the last 10 minutes. Add candi sugar during the last 10 minutes of the boil. Chill the wort and pitch the Belgian Abbey Ale yeast. Ferment at 68°F (20°C) for 10-14 days. Bottle or keg and carbonate to 2.4 volumes of CO2.",
+      "photoUrl": "https://grandwineandspirits.com/wp-content/uploads/2017/01/Belgian-Dubbel-or-Belgian-Dark-Beer.png"
+    },
+    {
+      "userId": 2,
+      "name": "Robust Porter",
+      "style": "Porter",
+      "malts": "Maris Otter - 6.5 lbs, Brown Malt - 1.5 lbs, Crystal 60 - 1 lb, Chocolate Malt - 0.5 lb, Roasted Barley - 0.25 lb",
+      "hops": "East Kent Goldings - 1 oz (60 min), Fuggles - 0.5 oz (10 min)",
+      "yeast": "London Ale Yeast by White Labs",
+      "adjuncts": "",
+      "recipeGuide": "Single infusion mash at 154 degrees Fahrenheit (67.8C) for 60 minutes. Add East Kent Goldings at the start of the boil, and Fuggles with 10 minutes left. Ferment at 68 degrees Fahrenheit (20C). Let sit for 7 days, then cold crash for 2-3 days before kegging/bottling.",
+      "id": 4,
+      "photoUrl": "https://www.greatfermentations.com/wp-content/uploads/2014/09/porter.jpg"
+    },
+    {
+      "userId": 3,
+      "name": "Belgian Wit",
+      "style": "Witbier",
+      "malts": "Pilsner Malt - 4.5 lbs, Unmalted Wheat - 4.5 lbs, Flaked Oats - 0.75 lb",
+      "hops": "Saaz - 1 oz (60 min), Bitter Orange Peel - 1 oz (10 min), Coriander - 1 oz (10 min)",
+      "yeast": "Belgian Witbier Yeast by White Labs",
+      "adjuncts": "",
+      "recipeGuide": "Single infusion mash at 152 degrees Fahrenheit (66.7C) for 60 minutes. Add Saaz hops at the start of the boil, and Bitter Orange Peel and Coriander with 10 minutes left. Ferment at 68 degrees Fahrenheit (20C) for 10 days, then bottle or keg.",
+      "id": 5,
+      "photoUrl": "https://www.castlemalting.com/Publications/Recipes/Images/BelgianWheatBeer256x256.png"
+    },
+    {
+      "userId": 2,
+      "name": "Hazy IPA",
+      "style": "New England IPA",
+      "malts": "2-row Pale Malt - 8 lbs, Flaked Oats - 2 lbs, Wheat Malt - 1 lb",
+      "hops": "Citra - 2 oz (15 min), Citra - 2 oz (5 min), Citra - 2 oz (whirlpool), Citra - 4 oz (dry hop)",
+      "yeast": "London Ale III by Wyeast",
+      "adjuncts": "Whirlfloc Tablet 1 tablet (15 min), Yeast Nutrient - 1 tsp (10 min)",
+      "recipeGuide": "Mash in at 152°F for 60 min, Sparge with 170°F water, Boil for 60 min, adding hops and adjuncts according to schedule, Chill wort to 68°F and pitch yeast, Ferment for 7-10 days, dry hop for last 2-3 days, Package and carbonate to 2.5 volumes of CO2",
+      "photoUrl": "https://homebrewanswers.com/wp-content/uploads/2018/04/Hazy-IPA-Recipe-1.jpg",
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "name": "Imperial Pastry Stout",
+      "style": "Imperial Stout",
+      "malts": "Maris Otter - 10 lbs, Crystal 120 - 1 lb, Chocolate Malt - 1 lb, Roasted Barley - 1 lb, Black Malt - 0.5 lb, Flaked Oats - 2 lbs, Lactose - 1 lb",
+      "hops": "Magnum - 1 oz (60 min), East Kent Goldings - 1 oz (15 min), East Kent Goldings - 1 oz (5 min)",
+      "yeast": "London Ale Yeast by White Labs",
+      "adjuncts": "Vanilla Beans - 2, Cocoa Powder - 0.5 lb",
+      "recipeGuide": "Single infusion mash at 154 degrees Fahrenheit (67.8C) for 60 minutes. Add Magnum at the start of the boil, East Kent Goldings at 15 and 5 minutes left. Add cocoa powder with 5 minutes left in the boil. Ferment at 68 degrees Fahrenheit (20C). After 5 days, add vanilla beans to the fermenter. Let sit for 7 more days, then cold crash for 2-3 days before kegging/bottling.",
+      "id": 5,
+      "photoUrl": "https://cdn.shopify.com/s/files/1/2785/6868/products/B11610-Sweet-Tooth-Pastry-Stout_cookie_cf0d4192-8747-41e9-92ba-a44170146a2e_x700.jpg?v=1610038851"
+    },
+    {
+      "userId": 6,
+      "name": "Rustic Grisette",
+      "style": "Grisette",
+      "malts": "4 lb 6-Row Barley, 1 lb Wheat Malt, 1 lb Flaked Wheat",
+      "hops": "1 ozStyrian Golding, 1 oz Saaz, ½ oz Styrian Golding",
+      "yeast": "WY3726 – Farmhouse Ale or your favorite saison or witbier strain",
+      "adjuncts": "N/A",
+      "recipeGuide": "Single infusion rest at 147°F for 60 minutes\nBoil and add hops\nChill to 80°F\nPitch healthy yeast into oxygenated wort and ferment at 80°F for 2 weeks, or until gravity is stable. It should finish very low, between 1.000 and 1.005\nBottle condition to 3.0 to 3.5 volumes of CO2 in thick-walled glass bottles",
+      "photoUrl": "https://bisonbrew.b-cdn.net/wp-content/uploads/2021/01/How-to-Brew-Grisette-Featured-Image.png",
+      "id": 7
     }
   ],
   "comments": [
@@ -89,6 +175,5 @@
       "timestamp": 1683745065340,
       "id": 5
     }
-  ],
-  "likes": []
+  ]
 }
